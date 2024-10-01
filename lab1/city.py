@@ -4,9 +4,7 @@ class CityData:
         self.outConCount = outConCount
         self.outCons = outCons
         self.visited = False
-        self.predecessor = -1
-
-    
+        self.predecessor = -1 
 
 def get_cities(file):
     cities = []
@@ -44,9 +42,6 @@ def dfs(cities, source, destination):
             
     return None
 
-        
-
-
 def index(c,cities):
     for i,city in enumerate(cities):
         if city.city == c:
@@ -57,15 +52,12 @@ def main():
     a = input("Please enter filename storing a network: ")
     cities = get_cities(a)
 
-
     while True:
         source = input("Enter the name of starting city: ")
         destination = input("Enter the name of destination: ")
 
         source_index = index(source,cities)
         destination_index = index(destination,cities)
-
-        print(source_index,destination_index)
 
         if source_index == -1:
             print(f"{source} is not a valid city, please re-enter.")
@@ -78,26 +70,11 @@ def main():
 
         if path:
             print(" -> ".join(path))
-
             break
 
         else:
-            print("there is not path from Kasur to Bakhar, please re-enter option: ")
+            print(f"there is not path from {source} to {destination}, please re-enter option: ")
             continue
 
 main()
-
-
-        
-
-                
-
-
-
-
-
-
-
-
-    
 

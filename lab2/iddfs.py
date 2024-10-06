@@ -1,5 +1,5 @@
 def iddfs(adj, source, target , max_depth, vertices):
-    for i in range(max_depth):
+    for i in range(max_depth+1):
         path =  dfs(source, target, i, adj ,vertices)
         if path:
             return path
@@ -44,7 +44,7 @@ def main():
 
     source = 0
     target = 5
-    max_depth = 3
+    max_depth = 2
     
     path = iddfs(adj, source, target , max_depth, vertices)
     print(path)

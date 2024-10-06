@@ -47,10 +47,10 @@ def rec_dfs(source,destination,depth,visited):
                 return [source]+path
 
 def main():
-    source_state = [[1,2,3],[4,0,5],[6,7,8]]
+    source_state = [[1,2,3],[4,5,6],[7,0,8]]
     destination_state = [[1,2,3],[4,5,6],[7,8,0]]
 
-    max_depth = 31
+    max_depth = 5
 
     path = iddfs(source_state, destination_state,max_depth)
     for i in path:

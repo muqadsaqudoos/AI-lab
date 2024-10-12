@@ -22,14 +22,15 @@ def edges(adj,u,v):
     adj[v].append(u)
 
 def main():
-    v = 5
+    v = 6
     adj = [[] for _ in range(v)]
 
     edges(adj,0,1)
-    edges(adj,0,3)
-    edges(adj,1,2)
-    edges(adj,2,3)
-    edges(adj,3,4)
+    edges(adj,0,2)
+    edges(adj,1,3)
+    edges(adj,2,4)
+    edges(adj,3,5)
+    edges(adj,4,5)
     print(adj)
     s = 0
     bfs(adj, s, v)

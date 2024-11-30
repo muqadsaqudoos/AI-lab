@@ -1,0 +1,29 @@
+ELIZA
+	* I’m feeling really stressed about my work. Can you help?
+	> Is it that you would like to be able to help? 
+	* “What do you think the future of AI will look like?”
+	> Oh... Let's move on to something else for a bit.  think the future of AI will look like? ”? 
+	* I keep failing to stick to my goals. Do you have any advice?”
+	> You're not really talking about me, are you? 
+	* Can you tell me a bit about yourself?
+	> Do I hear you saying that you want me to be able to tell you a bit about myself?
+	
+	Turing Test
+
+	Goal: Determine if the chatbot’s responses are indistinguishable from a human’s.
+	ELIZA’s Performance:
+	Lacks Empathy: Responses like “Is it that you would like to be able to help?” 
+	when the user expresses stress feel robotic, missing human warmth and understanding.
+	Awkward Rephrasing: Replies often repeat or deflect questions (e.g., “Let’s move on 
+	to something else…”), making it clear that ELIZA is a program rather than a person.
+	Conclusion: ELIZA fails the Turing Test because it doesn’t respond naturally or empathetically.
+	Winograd Schema Challenge
+
+	Goal: Test if the chatbot can understand context and resolve ambiguous references.
+	ELIZA’s Performance:
+	No Contextual Understanding: ELIZA doesn’t interpret the meaning behind user statements. 
+	For instance, it responds to goal-setting struggles with “You’re not really talking about me, are you?” 
+	showing it doesn’t grasp the user’s intent.
+	Limited Common Sense: ELIZA doesn’t show reasoning skills, which would likely make it
+	struggle with ambiguous statements, a core part of the Winograd Schema Challenge.
+	Conclusion: ELIZA would fail this challenge due to its inability to reason through context.

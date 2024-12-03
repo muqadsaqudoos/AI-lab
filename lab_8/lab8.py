@@ -33,9 +33,11 @@ def genetic_algorithm(string_length, pop_size, num_generations, mutation_rate):
         max_fitness = max(fitness_scores)
         best_individual = population[fitness_scores.index(max_fitness)]
         print(f"Generation {generation}: Best Fitness = {max_fitness}, Best Individual = {best_individual}")
+
         if max_fitness == string_length:
             print("Optimal solution found!")
             return best_individual
+        
         new_population = []
         while len(new_population) < pop_size:
             parent1, parent2 = select_parents(population, fitness_scores)
@@ -50,8 +52,8 @@ def genetic_algorithm(string_length, pop_size, num_generations, mutation_rate):
     return best_individual
 
 def main():
-    string_length = 20
-    pop_size = 50
+    string_length = 10
+    pop_size = 20
     num_generations = 100
     mutation_rate = 0.05
     result = genetic_algorithm(string_length, pop_size, num_generations, mutation_rate)

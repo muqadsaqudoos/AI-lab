@@ -3,13 +3,13 @@ import numpy as np
 def calculate_mean(values):
     return np.mean(values)
 
-def calculate_slope(X, Y, mean_X, mean_Y):
-    numerator = np.sum((X - mean_X) * (Y - mean_Y))
-    denominator = np.sum((X - mean_X)**2)
+def calculate_slope(X, Y, meanX, meanY):
+    numerator = np.sum((X - meanX) * (Y - meanY))
+    denominator = np.sum((X - meanX)**2)
     return numerator / denominator
 
-def calculate_intercept(mean_X, mean_Y, slope):
-    return mean_Y - slope * mean_X
+def calculate_intercept(meanX, meanY, slope):
+    return meanY - slope * meanX
 
 def predict(X, theta_0, theta_1):
     return theta_0 + theta_1 * X
@@ -39,8 +39,8 @@ def fit_linear_regression(X, Y, learning_rate=0.01, iterations=1000):
 
 def main():
 
-    X = np.array([30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000])
-    Y = np.array([1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500])
+    X = np.array([0,1,2,3,4,5,6,7,8,9,10])
+    Y = np.array([3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000])
     theta_0, theta_1 = fit_linear_regression(X, Y)
     Y_pred = predict(X, theta_0, theta_1)
     mse = calculate_mse(Y, Y_pred)

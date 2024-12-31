@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
-def sigmoid(z):
 
+def sigmoid(z):
     return 1/(1+np.exp(-z))
+    
 def cross_entropy_loss(y_true, y_pred):
     y_pred = np.clip(y_pred, 1e-15, 1 - 1e-15)  
     return -np.mean(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
